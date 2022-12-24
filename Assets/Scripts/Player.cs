@@ -15,12 +15,14 @@ public class Player : MonoBehaviour
         // 點擊左方向鈕時
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
+            GetComponent<AudioSource>().Play();
             transform.Translate(-3, 0, 0); // 往左移動「3」
         }
 
         // 點擊左方向鈕時
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
+            GetComponent<AudioSource>().Play();
             transform.Translate(3, 0, 0); // 往右移動「3」
         }
     }
@@ -34,12 +36,14 @@ public class Player : MonoBehaviour
     // 當玩家按下畫面左按鍵時，貓咪往左移動「3」
     public void LButtonDown()
     {
+        GetComponent<AudioSource>().Play();
         transform.Translate(-3, 0, 0);
     }
 
     // 當玩家按下畫面右按鍵時，貓咪往右移動「3」
     public void RButtonDown()
     {
+        GetComponent<AudioSource>().Play();
         transform.Translate(3, 0, 0);
     }
 
