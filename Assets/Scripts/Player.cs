@@ -36,13 +36,14 @@ public class Player : MonoBehaviour
     {
         if (collision.tag == "Arrow")
         {
-            gameManager.GetComponent<GameManager>().DecreaseHp();
             audioSource.PlayOneShot(Hurt);
+            gameManager.GetComponent<GameManager>().DecreaseHp();
+            
         }
         if (collision.tag == "catfood")
         {
             gameManager.GetComponent<GameManager>().AddHp();
-            audioSource.PlayOneShot(Hurt); ;
+            audioSource.PlayOneShot(Hurt);
         }
 
     }
