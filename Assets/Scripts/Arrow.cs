@@ -29,8 +29,8 @@ public class Arrow : MonoBehaviour
         if (collision.tag == "Increase Score")
         {
             gameManager.GetComponent<GameManager>().IncreaseScore();
-            Destroy(gameObject);
+       
         }
-        
+        Destroy(gameObject);
     }
 }

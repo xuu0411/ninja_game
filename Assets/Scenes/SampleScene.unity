@@ -457,7 +457,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8a9257271302204f90dcc6b3cd51348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 1894550102}
   Walk: {fileID: 8300000, guid: 12e237fecb6e92f4099798a25925dfbf, type: 3}
   Hurt: {fileID: 8300000, guid: dded5e9a11b5cdb459446387cdce2a51, type: 3}
 --- !u!58 &1001535115
@@ -939,6 +938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowPrefab: {fileID: 6400692865577086477, guid: 380e39cbc4da64c43a428fb1e9d03686, type: 3}
+  catfoodPrefab: {fileID: 1825475802077049475, guid: 7d0b448df0573124c96eb00364455eaf, type: 3}
   hpGauge: {fileID: 470521109}
   ScoreText: {fileID: 877711800}
 --- !u!4 &1894550104

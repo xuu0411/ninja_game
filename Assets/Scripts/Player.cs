@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public GameObject gameManager; //置放GameManager物件的公開變數
+    GameObject gameManager; //置放GameManager物件的公開變數
     AudioSource audioSource;
     public AudioClip Walk;
     public AudioClip Hurt;
     void Start()
     {
+        gameManager = GameObject.Find("GameManager");
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -33,9 +34,19 @@ public class Player : MonoBehaviour
     // 當貓咪碰到其他有碰撞體的東西時
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        audioSource.PlayOneShot(Hurt);
-        gameManager.GetComponent<GameManager>().DecreaseHp(); // 扣血
+        if (collision.tag == "Arrow")
+        {
+            gameManager.GetComponent<GameManager>().DecreaseHp();
+            audioSource.PlayOneShot(Hurt);
+        }
+        if (collision.tag == "catfood")
+        {
+            gameManager.GetComponent<GameManager>().AddHp();
+            audioSource.PlayOneShot(Hurt); ;
+        }
+
     }
+   
 
     // 當玩家按下畫面左按鍵時，貓咪往左移動「3」
     public void LButtonDown()
